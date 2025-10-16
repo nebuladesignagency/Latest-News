@@ -1,0 +1,54 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.latest-news-block.swiper-enabled {
+    overflow: hidden;
+    
+    .swiper-pagination {
+        .swiper-pagination-bullet {
+            background-color: var(--wp--preset--color--primary, #f6be00);
+            opacity: 0.5;
+            
+            &.swiper-pagination-bullet-active {
+                background-color: var(--wp--preset--color--primary, #f6be00);
+                opacity: 1;
+            }
+        }
+        
+        .swiper-pagination-progressbar-fill {
+            background-color: var(--wp--preset--color--primary, #f6be00);
+        }
+        
+        .swiper-pagination-fraction {
+            color: var(--wp--preset--color--primary, #f6be00);
+        }
+    }
+    
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
+        color: var(--wp--preset--color--contrast, #000000);
+    }
+}
+
+.latest-news-block {
+    .post-card.featured {
+        position: relative;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 2px solid var(--wp--preset--color--quinary, #f6be00);
+            border-radius: inherit;
+            pointer-events: none;
+            z-index: 1;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+{
+  "apiVersion": 2,
+  "name": "latest-news-block/latest-news",
+  "title": "Latest News",
+  "category": "widgets",
+  "icon": "list-view",
+  "description": "A custom block to display latest news posts with Ajax.",
+  "supports": {
+    "html": false
+  },
+"attributes": {
+  "postsToShow": { "type": "number", "default": 3 },
+  "columns": { "type": "number", "default": 3 },
+  "showAuthor": { "type": "boolean", "default": true },
+  "showExcerpt": { "type": "boolean", "default": true },
+  "showDate": { "type": "boolean", "default": true },
+  "showThumbnails": { "type": "boolean", "default": true },
+  "readMore": { "type": "boolean", "default": true },
+  "showCategory": { "type": "boolean", "default": true },
+  "swiperEnabled": { "type": "boolean", "default": false },
+  "swiperAutoplay": { "type": "boolean", "default": true },
+  "swiperLoop": { "type": "boolean", "default": true },
+  "swiperEffect": { "type": "string", "default": "slide" },
+  "swiperCenteredSlides": { "type": "boolean", "default": false },
+
+  "swiperPaginationType": { "type": "string", "default": "bullets" },
+  "swiperKeyboard": { "type": "boolean", "default": true },
+  "swiperNavigation": { "type": "boolean", "default": true },
+  "swiperSlidesPerView": { "type": "number", "default": 1 },
+  "swiperSpaceBetween": { "type": "number", "default": 24 },
+  "orderBy": { "type": "string", "default": "date_desc" },
+  "postType": { "type": "string", "default": "post" },
+  "selectedCategories": { "type": "array", "default": [] },
+  "selectedAuthor": { "type": "string", "default": "" },
+  "featuredSticky": { "type": "boolean", "default": false },
+  "paginationColor": { "type": "string", "default": "" },
+  "paginationOffset": { "type": "number", "default": 0 },
+  "arrowColor": { "type": "string", "default": "" },
+  "arrowOffset": { "type": "number", "default": 0 }
+},
+  "editorScript": "file:./build/index.js",
+  "script": "file:./build/frontend.js",
+  "style": "file:./build/frontend.css",
+  "editorStyle": "file:./build/index.css",
+  "render": "file:./render.php"
+}
